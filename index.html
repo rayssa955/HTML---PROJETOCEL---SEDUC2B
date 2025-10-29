@@ -4,200 +4,223 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ray IPlace - Início</title>
   <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
-  <title>Ray IPlace</title>
-  
+
   <style>
-    /* 14. Zerando margens e paddings padrão */
+    /* ---------- ESTILOS GERAIS ---------- */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
 
-    /* 13. Conteúdo principal */
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(120deg, #e2e2e2, #ffffff);
+      background: radial-gradient(circle at top right, #0f0f1a, #0a0a12 70%);
+      color: #f1f1f1;
+      min-height: 100vh;
       display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
+      flex-direction: column;
     }
 
-    /* 11. Div principal */
-    .div-principal {
-      max-width: 400px;
+    a {
+      text-decoration: none;
+    }
+
+    /* ---------- CABEÇALHO ---------- */
+    header {
+      background: linear-gradient(90deg, #6a11cb, #2575fc);
+      color: #fff;
       text-align: center;
-      background-color: #fff;
-      padding: 25px;
-      border-radius: 20px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      padding: 30px 15px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
     }
 
-    /* 5, 7, 9, 10. Títulos */
-    h2 {
-      color: #000;
+    header img {
+      width: 90px;
+      filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.6));
+      transition: transform 0.3s ease;
+    }
+
+    header img:hover {
+      transform: scale(1.1);
+    }
+
+    header h1 {
+      margin-top: 10px;
+      font-size: 2.3rem;
+      letter-spacing: 1px;
+      color: #fff;
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+    }
+
+    header p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+      font-style: italic;
+    }
+
+    /* ---------- NAVEGAÇÃO ---------- */
+    nav {
+      background-color: #121221;
+      text-align: center;
+      padding: 14px 0;
+      border-bottom: 2px solid #6a11cb;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    nav a {
+      color: #b4b4ff;
+      font-weight: 600;
+      margin: 0 18px;
+      font-size: 1rem;
+      position: relative;
+      transition: color 0.3s ease, text-shadow 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #fff;
+      text-shadow: 0 0 10px #6a11cb;
+    }
+
+    /* ---------- CONTEÚDO PRINCIPAL ---------- */
+    main {
+      text-align: center;
+      padding: 60px 20px;
+      flex: 1;
+    }
+
+    main h2 {
       font-size: 2rem;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
+      color: #9f8fff;
+      letter-spacing: 0.5px;
+      text-shadow: 0 0 8px rgba(159, 143, 255, 0.4);
+    }
+
+    main p {
+      font-size: 1.1rem;
+      margin-bottom: 25px;
+      color: #ddd;
+      line-height: 1.5;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    main img {
+      width: 320px;
+      border-radius: 18px;
+      margin: 30px 0;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      box-shadow: 0 0 20px rgba(138, 92, 255, 0.4);
+    }
+
+    main img:hover {
+      transform: scale(1.08);
+      box-shadow: 0 0 25px rgba(100, 150, 255, 0.6);
+    }
+
+    /* ---------- IFRAME DO YOUTUBE ---------- */
+    .video-container {
+      margin-top: 30px;
+      border-radius: 15px;
+      overflow: hidden;
+      width: 360px;
+      height: 640px;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 0 20px rgba(80, 150, 255, 0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .video-container:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 30px rgba(100, 180, 255, 0.5);
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
     }
 
     h3 {
-      color: #555;
-      font-size: 1.2rem;
+      font-size: 1.4rem;
+      color: #88b8ff;
       margin-bottom: 15px;
+      margin-top: 40px;
     }
 
-    h5 {
-      margin-top: 20px;
-      font-size: 1rem;
-      color: #222;
-    }
-
-    h6 {
-      color: #444;
-      font-size: 0.9rem;
-      margin-bottom: 15px;
-    }
-
-    /* 8. Parágrafo */
-    p {
-      color: #666;
-      font-size: 1rem;
-      margin-bottom: 15px;
-    }
-
-    /* 3, 6. Botão */
-    button {
-      background-color: #007aff;
+    /* ---------- RODAPÉ ---------- */
+    footer {
+      background: linear-gradient(90deg, #6a11cb, #2575fc);
       color: white;
-      border: none;
-      padding: 12px 25px;
-      border-radius: 25px;
-      cursor: pointer;
-      font-size: 1rem;
-      transition: 0.3s;
+      text-align: center;
+      padding: 18px;
+      font-size: 0.95rem;
+      box-shadow: 0 -3px 20px rgba(0, 0, 0, 0.3);
     }
 
-    /* 1. Efeito do mouse */
-    button:hover {
-      background-color: #005ecb;
-      transform: scale(1.05);
+    footer p {
+      margin: 0;
+      letter-spacing: 0.5px;
     }
 
-    /* 2, 4. Área de seleção de cores */
-    .opcoes-cores {
-      margin-top: 15px;
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-    }
+    /* ---------- RESPONSIVIDADE ---------- */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
 
-    input[type="radio"] {
-      display: none;
-    }
+      nav a {
+        margin: 0 8px;
+        font-size: 0.9rem;
+      }
 
-    /* 2. Cores da bolinha */
-    .cor {
-      width: 25px;
-      height: 25px;
-      border-radius: 50%;
-      border: 2px solid #ccc;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    /* Cores específicas */
-    .cor-amarelo {
-      background-color: #ffe600;
-    }
-
-    .cor-azul {
-      background-color: #007aff;
-    }
-
-    .cor-branco {
-      background-color: #f0f0f0;
-    }
-
-    .cor-preto {
-      background-color: #000;
-    }
-
-    .cor-roxo {
-      background-color: #af52de;
-    }
-
-    .cor-vermelho {
-      background-color: #ff3b30;
-    }
-
-    /* Efeito hover nas cores */
-    .cor:hover {
-      transform: scale(1.2);
-      border-color: #888;
-    }
-
-    /* 12. Imagem do celular */
-    #iphone-img {
-      width: 300px;
-      margin-left: 50px;
-      transition: transform 0.4s ease;
-    }
-
-    /* Efeito de movimento na imagem */
-    #iphone-img:hover {
-      transform: rotate(-3deg) scale(1.05);
+      main img, .video-container {
+        width: 250px;
+        height: 440px; /* mantém proporção do Shorts em mobile */
+      }
     }
   </style>
 </head>
 
 <body>
 
+  <!-- Cabeçalho -->
+  <header>
+    <img src="img/logo.png" alt="Logo Ray IPlace">
+    <h1>Ray IPlace</h1>
+    <p>A tecnologia que combina com você!</p>
+  </header>
+
+  <!-- Navegação -->
+  <nav>
+    <a href="index.html">Início</a>
+    <a href="catalogo.html">Catálogo</a>
+    <a href="produto.html">Detalhes</a>
+    <a href="contato.html">Contato</a>
+  </nav>
+
+  <!-- Conteúdo principal -->
   <main>
-    <div class="div-principal">
-      <h2>Iphone e suas versões</h2>
-      <h3>O Atual celular da sua escolha resistente de ver.</h3>
-      <p>Em dois tamanhos perfeitos. Agora com um toque de amarelo.</p>
-      <h6>A partir de R$ 899,50/mês ou R$ 10.899*</h6>
+    <h2>Bem-vindo à Ray IPlace ⚡</h2>
+    <p>Experimente o poder e a elegância dos novos iPhones — tecnologia e estilo em um só lugar.</p>
 
-      <button>Comprar!</button>
+    <img src="img/iphone-azul.png" alt="Imagem de iPhone Azul em destaque">
 
-      <h5>Escolha a sua cor:</h5>
-
-      <div class="opcoes-cores">
-        <input type="radio" name="cor" id="amarelo" onclick="trocarImagem('iphone-amarelo.png')">
-        <label for="amarelo" class="cor cor-amarelo"></label>
-
-        <input type="radio" name="cor" id="azul" onclick="trocarImagem('iphone-azul.png')" checked>
-        <label for="azul" class="cor cor-azul"></label>
-
-        <input type="radio" name="cor" id="branco" onclick="trocarImagem('iphone-branco.png')">
-        <label for="branco" class="cor cor-branco"></label>
-
-        <input type="radio" name="cor" id="preto" onclick="trocarImagem('iphone-preto.png')">
-        <label for="preto" class="cor cor-preto"></label>
-
-        <input type="radio" name="cor" id="roxo" onclick="trocarImagem('iphone-roxo.png')">
-        <label for="roxo" class="cor cor-roxo"></label>
-
-        <input type="radio" name="cor" id="vermelho" onclick="trocarImagem('iphone-vemelho.png')">
-        <label for="vermelho" class="cor cor-vermelho"></label>
-      </div>
+    <h3>Assista a unboxing</h3>
+    <div class="video-container">
+      <iframe src="https://youtube.com/shorts/ohCMvF3lyHE?si=YRQwvUHyh44cR8jg" allowfullscreen></iframe>
     </div>
-
-    <img id="iphone-img" class="Imagem-cel-azul" src="./img/iphone-azul.png" alt="Imagem do Iphone">
   </main>
 
-  <script>
-    function trocarImagem(nomeImagem) {
-      var img = document.getElementById('iphone-img');
-      img.onerror = function () {
-        this.src = './img/iphone-azul.png';
-      };
-      img.src = './img/' + nomeImagem;
-    }
-  </script>
+  <!-- Rodapé -->
+  <footer>
+    <p>&copy; 2025 Ray IPlace. Todos os direitos reservados.</p>
+  </footer>
 
 </body>
 

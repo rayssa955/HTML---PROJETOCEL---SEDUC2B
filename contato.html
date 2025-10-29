@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato - Ray IPlace</title>
+  <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+
+  <style>
+    /* ---------- ESTILOS GERAIS ---------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: radial-gradient(circle at top right, #0f0f1a, #0a0a12 70%);
+      color: #f1f1f1;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    /* ---------- CABEÇALHO ---------- */
+    header {
+      background: linear-gradient(90deg, #6a11cb, #2575fc);
+      color: #fff;
+      text-align: center;
+      padding: 30px 15px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    header h1 {
+      font-size: 2.2rem;
+      letter-spacing: 1px;
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    }
+
+    /* ---------- NAVEGAÇÃO ---------- */
+    nav {
+      background-color: #121221;
+      text-align: center;
+      padding: 14px 0;
+      border-bottom: 2px solid #6a11cb;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    nav a {
+      color: #b4b4ff;
+      font-weight: 600;
+      margin: 0 18px;
+      font-size: 1rem;
+      position: relative;
+      transition: color 0.3s ease, text-shadow 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #fff;
+      text-shadow: 0 0 10px #6a11cb;
+    }
+
+    /* ---------- CONTEÚDO PRINCIPAL ---------- */
+    main {
+      text-align: center;
+      padding: 60px 20px;
+      flex: 1;
+    }
+
+    main h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      color: #9f8fff;
+      text-shadow: 0 0 8px rgba(159, 143, 255, 0.4);
+    }
+
+    main p {
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+      color: #ccc;
+    }
+
+    /* ---------- FORMULÁRIO ---------- */
+    form {
+      background-color: #121221;
+      max-width: 450px;
+      margin: 0 auto;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 25px rgba(120, 90, 255, 0.3);
+      text-align: left;
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 12px;
+      color: #bfbfff;
+    }
+
+    input,
+    textarea,
+    select {
+      width: 100%;
+      padding: 12px;
+      margin-top: 6px;
+      border: none;
+      border-radius: 10px;
+      background-color: #1b1b2a;
+      color: #fff;
+      font-size: 1rem;
+      transition: 0.3s;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: #888;
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+      outline: none;
+      box-shadow: 0 0 10px #6a11cb;
+      background-color: #202036;
+    }
+
+    button {
+      background: linear-gradient(90deg, #6a11cb, #2575fc);
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: 600;
+      margin-top: 20px;
+      transition: 0.3s ease;
+      width: 100%;
+      box-shadow: 0 0 15px rgba(100, 150, 255, 0.3);
+    }
+
+    button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 25px rgba(100, 150, 255, 0.6);
+    }
+
+    /* ---------- CONTATOS ---------- */
+    .contato-info {
+      margin-top: 30px;
+      color: #aaa;
+      font-size: 1rem;
+    }
+
+    .contato-info strong {
+      color: #9f8fff;
+    }
+
+    /* ---------- RODAPÉ ---------- */
+    footer {
+      background: linear-gradient(90deg, #6a11cb, #2575fc);
+      color: white;
+      text-align: center;
+      padding: 18px;
+      font-size: 0.95rem;
+      box-shadow: 0 -3px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+    /* ---------- RESPONSIVIDADE ---------- */
+    @media (max-width: 600px) {
+      form {
+        padding: 20px;
+      }
+
+      main h2 {
+        font-size: 1.7rem;
+      }
+
+      nav a {
+        margin: 0 8px;
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Cabeçalho -->
+  <header>
+    <h1>Fale Conosco</h1>
+  </header>
+
+  <!-- Navegação -->
+  <nav>
+    <a href="index.html">Início</a>
+    <a href="catalogo.html">Catálogo</a>
+    <a href="produto.html">Detalhes</a>
+    <a href="contato.html">Contato</a>
+  </nav>
+
+  <!-- Conteúdo principal -->
+  <main>
+    <h2>Entre em Contato com a Ray IPlace 💬</h2>
+    <p>Preencha o formulário abaixo e nossa equipe retornará o mais rápido possível.</p>
+
+    <form onsubmit="return validarFormulario()">
+      <label for="nome">Nome completo:</label>
+      <input type="text" id="nome" name="nome" required placeholder="Digite seu nome">
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required placeholder="exemplo@email.com">
+
+      <label for="idade">Idade:</label>
+      <input type="number" id="idade" name="idade" required min="18" placeholder="Apenas maiores de 18 anos">
+
+      <label for="avaliacao">Como você avalia nosso site?</label>
+      <select id="avaliacao" name="avaliacao" required>
+        <option value="">Selecione...</option>
+        <option value="otimo">Ótimo</option>
+        <option value="bom">Bom</option>
+        <option value="regular">Regular</option>
+        <option value="ruim">Ruim</option>
+      </select>
+
+      <label for="mensagem">Mensagem:</label>
+      <textarea id="mensagem" name="mensagem" rows="4" required placeholder="Deixe sua mensagem"></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
+
+    <div class="contato-info">
+      <p>
+        <strong>Telefone:</strong> (11) 4002-8922 <br>
+        <strong>Email:</strong> rayiplace@gmail.com
+      </p>
+    </div>
+  </main>
+
+  <!-- Validação -->
+  <script>
+    function validarFormulario() {
+      const idade = document.getElementById("idade").value;
+      if (idade < 18) {
+        alert("⚠️ Apenas maiores de 18 anos podem se cadastrar!");
+        return false;
+      }
+      alert("✅ Formulário enviado com sucesso!");
+      return true;
+    }
+  </script>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>&copy; 2025 Ray IPlace. Todos os direitos reservados.</p>
+  </footer>
+
+</body>
+
+</html>
